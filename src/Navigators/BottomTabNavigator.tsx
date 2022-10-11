@@ -6,46 +6,28 @@ import React from "react";
 import { Text, View } from "react-native";
 import { HomeIcon, MenuIcon, PlusIcon } from "../Icons/TabBarIcons";
 import PlusButton from "../Components/PlusButton";
+import NewsCard from "../Components/NewsCard";
+import News from "../Screens/News";
 
 const MainStack = createBottomTabNavigator();
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </Text>
-      <Text>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </Text>
-      <Text>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </Text>
-      <Text>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </Text>
-      <Text>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      </Text>
-    </View>
-  );
-}
+
 
 export default function BottomTabNavigator() {
   return (
     <NavigationContainer>
       <MainStack.Navigator
         tabBar={props => <TabBar {...props} />}
-        initialRouteName="Home"
+        initialRouteName="News"
       >
         <MainStack.Screen
-          name="Home"
-          component={HomeScreen}
+          name="News"
+          component={News}
           options={{ tabBarIcon: <HomeIcon /> }}
         />
         <MainStack.Screen
           name="Create"
-          component={HomeScreen}
+          component={News}
           options={{
             tabBarIcon: <PlusButton />,
             tabBarLabel: "",
@@ -54,7 +36,7 @@ export default function BottomTabNavigator() {
         />
         <MainStack.Screen
           name="Profile"
-          component={HomeScreen}
+          component={News}
           options={{ tabBarIcon: <MenuIcon /> }}
         />
       </MainStack.Navigator>

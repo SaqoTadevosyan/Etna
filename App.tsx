@@ -1,9 +1,13 @@
 import BottomTabNavigator from "./src/Navigators/BottomTabNavigator";
 import React from "react";
-import { SafeAreaView } from "react-native";
-
+import { store } from "./src/store";
+import { Provider } from "react-redux";
 const App = () => {
-  return <BottomTabNavigator />;
+  return (
+    <Provider store={store}>
+      <BottomTabNavigator />
+    </Provider>
+  );
 };
 
 export default App;

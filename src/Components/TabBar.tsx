@@ -92,5 +92,6 @@ const styles = StyleSheet.create({
   },
   label: {
     marginTop: 7,
+    fontFamily: "Avenir-Medium",
   },
 });
