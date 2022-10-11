@@ -1,13 +1,9 @@
-import MainNavigator from "@/Navigators/MainNavigator";
+import BottomTabNavigator from "./src/Navigators/BottomTabNavigator";
 import React from "react";
-import { View } from "react-native";
+import { SafeAreaView } from "react-native";
 
 const App = () => {
-  return (
-    <View>
-      <MainNavigator />
-    </View>
-  );
+  return <BottomTabNavigator />;
 };
 
 export default App;
