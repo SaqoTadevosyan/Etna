@@ -3,15 +3,12 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TabBar from "../Components/TabBar";
 import React from "react";
-import { Text, View } from "react-native";
-import { HomeIcon, MenuIcon, PlusIcon } from "../Icons/TabBarIcons";
+import { HomeIcon, MenuIcon } from "../Icons/TabBarIcons";
 import PlusButton from "../Components/PlusButton";
-import NewsCard from "../Components/NewsCard";
 import News from "../Screens/News";
+import ProfileNavigator from "./ProfileNavigator";
 
 const MainStack = createBottomTabNavigator();
-
-
 
 export default function BottomTabNavigator() {
   return (
@@ -19,6 +16,9 @@ export default function BottomTabNavigator() {
       <MainStack.Navigator
         tabBar={props => <TabBar {...props} />}
         initialRouteName="News"
+        screenOptions={{
+          headerShown: false,
+        }}
       >
         <MainStack.Screen
           name="News"
@@ -35,9 +35,9 @@ export default function BottomTabNavigator() {
           }}
         />
         <MainStack.Screen
-          name="Profile"
-          component={News}
-          options={{ tabBarIcon: <MenuIcon /> }}
+          name="ProfileStack"
+          component={ProfileNavigator}
+          options={{ tabBarIcon: <MenuIcon />, tabBarLabel: "Profile" }}
         />
       </MainStack.Navigator>
     </NavigationContainer>

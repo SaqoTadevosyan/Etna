@@ -12,7 +12,7 @@ export default function NewsCard({ post }: Props) {
     <View style={[styles.newsCardContainer]}>
       <Image
         source={{
-          uri: "https://picsum.photos/200/300",
+          uri: `https://picsum.photos/200/300?id=${post.id}`,
         }}
         style={[styles.image]}
       />
@@ -51,6 +51,15 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     paddingRight: 10,
     flex: 1,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
   },
   image: {
     height: 141,

@@ -29,6 +29,7 @@ export const newsSlice = createSlice({
   extraReducers: builder => {
     builder.addCase(getAllNews.fulfilled, (state, payload) => {
       state.news = payload.payload;
+      state.favoriteNews = payload.payload;
       state.loading = false;
     });
     builder.addCase(getAllNews.pending, (state) => {
@@ -38,7 +39,7 @@ export const newsSlice = createSlice({
 });
 
 //Selectors
-export const favoriteNews = state => state.favoriteNews;
+export const favoriteNews = state => state.news.favoriteNews;
 export const allNewsSelector = state => state.news.news;
 export const newsLoading = state => state.news.loading;
 
