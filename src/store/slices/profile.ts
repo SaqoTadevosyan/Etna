@@ -8,7 +8,7 @@ type stateType = {
 const initialState: stateType = {
   userInfo: {
     name: "Jovi Daniel",
-    userName: "@joviden",
+    userName: "joviden",
     position: "UX Designer",
   },
 };

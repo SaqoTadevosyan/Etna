@@ -41,6 +41,8 @@ export default function CategoriesCarousel() {
       sliderWidth={Dimensions.get("window").width}
       itemWidth={Math.round(Dimensions.get("window").width * 0.7)}
       inactiveSlideShift={0}
+      autoplay={true}
+      loop={true}
       useScrollView={true}
       style={{ marginBottom: 32 }}
       sliderHeight={300}

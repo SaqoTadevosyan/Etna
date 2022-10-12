@@ -8,6 +8,7 @@ import TabBar from "../Components/TabBar";
 import { HomeIcon, MenuIcon } from "../Icons/TabBarIcons";
 import News from "../Screens/News";
 import ProfileNavigator from "./ProfileNavigator";
+import NewsReader from "../Screens/NewsReader";
 
 const MainStack = createBottomTabNavigator();
 
@@ -28,7 +29,7 @@ export default function BottomTabNavigator() {
         />
         <MainStack.Screen
           name="Create"
-          component={News}
+          component={NewsReader}
           options={{
             tabBarIcon: <PlusButton />,
             tabBarLabel: "",
