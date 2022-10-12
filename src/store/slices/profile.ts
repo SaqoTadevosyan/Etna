@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 import { IUser } from "../../types/IProfile";
 
 type stateType = {

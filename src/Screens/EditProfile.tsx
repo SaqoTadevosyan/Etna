@@ -1,22 +1,24 @@
-import { useNavigation } from "@react-navigation/native";
-import { LeftIcon } from "../Icons/ProfileIcons";
 import React from "react";
+
 import {
   Image,
   SafeAreaView,
   StyleSheet,
   Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
-import { useForm } from "react-hook-form";
+
 import { yupResolver } from "@hookform/resolvers/yup";
-import { profileSchema } from "../validation/profileSchema";
-import FormInput from "../Components/FormInput";
+import { useNavigation } from "@react-navigation/native";
+import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { setUserInfo, userProfileSelector } from "../store/slices/profile";
 import { IUser } from "types/IProfile";
+
+import FormInput from "../Components/FormInput";
+import { LeftIcon } from "../Icons/ProfileIcons";
+import { setUserInfo, userProfileSelector } from "../store/slices/profile";
+import { profileSchema } from "../validation/profileSchema";
 
 export default function EditProfile() {
   const navigation = useNavigation();

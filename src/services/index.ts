@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import { Config } from "../config";
 
 export const api = axios.create({
@@ -9,7 +10,5 @@ export const api = axios.create({
   },
   timeout: 3000,
 });
-
-
 
 export default api;

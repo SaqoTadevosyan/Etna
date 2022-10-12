@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchNews } from "../../services/News";
 import { INews } from "types/INews";
+
+import { fetchNews } from "../../services/News";
 
 type stateType = {
   favoriteNews: INews[];
@@ -13,7 +14,7 @@ const initialState: stateType = {
   loading: false,
 };
 
-export const getAllNews = createAsyncThunk("news/get", async data => {
+export const getAllNews = createAsyncThunk("news/get", async () => {
   const response = await fetchNews();
   return response;
 });
@@ -32,8 +33,8 @@ export const newsSlice = createSlice({
       state.favoriteNews = payload.payload;
       state.loading = false;
     });
-    builder.addCase(getAllNews.pending, (state) => {
-        state.loading = true;
+    builder.addCase(getAllNews.pending, state => {
+      state.loading = true;
     });
   },
 });

@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 import newsReducer from "./slices/news";
 import profileReducer from "./slices/profile";
 

@@ -1,10 +1,11 @@
+import React from "react";
+
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import TabBar from "../Components/TabBar";
-import React from "react";
-import { HomeIcon, MenuIcon } from "../Icons/TabBarIcons";
+
 import PlusButton from "../Components/PlusButton";
+import TabBar from "../Components/TabBar";
+import { HomeIcon, MenuIcon } from "../Icons/TabBarIcons";
 import News from "../Screens/News";
 import ProfileNavigator from "./ProfileNavigator";
 

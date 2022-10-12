@@ -11,6 +11,7 @@ module.exports = {
     'array-bracket-spacing': ['error', 'never'],
     'react/require-default-props': ['off'],
     'react/no-unstable-nested-components': ['off'],
+    "react-native/no-inline-styles": 0,
     'import/order': [
       'error',
       {

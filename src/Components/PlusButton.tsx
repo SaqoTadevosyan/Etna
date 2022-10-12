@@ -1,6 +1,8 @@
-import { PlusIcon } from "../Icons/TabBarIcons";
 import React from "react";
+
 import { View } from "react-native";
+
+import { PlusIcon } from "../Icons/TabBarIcons";
 
 export default function PlusButton() {
   return (

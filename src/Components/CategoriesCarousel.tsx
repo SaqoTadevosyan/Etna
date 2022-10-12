@@ -1,5 +1,7 @@
 import React from "react";
+
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
+
 import Carousel from "react-native-snap-carousel";
 
 const data = [
@@ -20,7 +22,7 @@ const data = [
   },
 ];
 
-const CarouselCardItem = ({ item, index }) => {
+const CarouselCardItem = ({ item }) => {
   return (
     <View>
       <Text style={styles.title}>{item.title}</Text>
@@ -78,7 +80,6 @@ const styles = StyleSheet.create({
   body: {
     color: "#222",
     fontSize: 18,
-    paddingLeft: 20,
     paddingLeft: 20,
     paddingRight: 20,
     borderRadius: 28,

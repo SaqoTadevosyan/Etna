@@ -1,7 +1,10 @@
-import { ClockIcon, FavoriteIcon, LikeIcon } from "../Icons/NewsIcons";
 import React from "react";
+
 import { Image, StyleSheet, Text, View } from "react-native";
+
 import { INews } from "types/INews";
+
+import { ClockIcon, FavoriteIcon, LikeIcon } from "../Icons/NewsIcons";
 
 interface Props {
   post: INews;

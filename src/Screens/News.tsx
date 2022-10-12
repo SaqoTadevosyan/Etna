@@ -1,7 +1,6 @@
-import NewsCard from "../Components/NewsCard";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+
 import {
-  ActivityIndicator,
   FlatList,
   SafeAreaView,
   ScrollView,
@@ -9,10 +8,13 @@ import {
   Text,
   View,
 } from "react-native";
-import { allNewsSelector, getAllNews, newsLoading } from "../store/slices/news";
+
 import { useDispatch, useSelector } from "react-redux";
-import NewsSkeleton from "../Components/Skeletons/NewsSkeleton";
+
 import CategoriesCarousel from "../Components/CategoriesCarousel";
+import NewsCard from "../Components/NewsCard";
+import NewsSkeleton from "../Components/Skeletons/NewsSkeleton";
+import { allNewsSelector, getAllNews, newsLoading } from "../store/slices/news";
 
 export default function News() {
   const news = useSelector(allNewsSelector);
@@ -20,7 +22,7 @@ export default function News() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllNews());
-  }, []);
+  }, [dispatch]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -34,7 +36,11 @@ export default function News() {
             renderItem={singleNews => {
               return <NewsCard post={singleNews.item} />;
             }}
-            style={{ paddingVertical: 10,paddingHorizontal:30, backgroundColor: "#F5F8FF" }}
+            style={{
+              paddingVertical: 10,
+              paddingHorizontal: 30,
+              backgroundColor: "#F5F8FF",
+            }}
             keyExtractor={item => item.id}
           />
         ) : !loading ? (

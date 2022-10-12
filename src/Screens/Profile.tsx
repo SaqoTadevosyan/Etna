@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   FlatList,
   Image,
@@ -9,12 +10,14 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { MoreIcon } from "../Icons/ProfileIcons";
-import { useSelector } from "react-redux";
-import { favoriteNews } from "../store/slices/news";
-import NewsCard from "../Components/NewsCard";
-import Popover from "react-native-popover-view";
+
 import { useNavigation } from "@react-navigation/native";
+import Popover from "react-native-popover-view";
+import { useSelector } from "react-redux";
+
+import NewsCard from "../Components/NewsCard";
+import { MoreIcon } from "../Icons/ProfileIcons";
+import { favoriteNews } from "../store/slices/news";
 import { userProfileSelector } from "../store/slices/profile";
 import { IUser } from "../types/IProfile";
 

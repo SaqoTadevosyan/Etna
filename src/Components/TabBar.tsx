@@ -1,6 +1,8 @@
-import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import React from "react";
+
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+
+import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 
 export default function TabBar({
   state,
